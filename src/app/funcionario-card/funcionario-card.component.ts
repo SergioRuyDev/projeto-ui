@@ -9,4 +9,12 @@ export class FuncionarioCardComponent {
 
 @Input() funcionario: any;
 
+getEstilosCartao() {
+  return {
+    'border-width.px': this.funcionario.id,
+    backgroundColor: this.funcionario.id % 2 === 0
+    ? 'lightblue' : 'lightgreen'
+  };
+}
+
 }
